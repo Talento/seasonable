@@ -1,0 +1,11 @@
+<% seasons = seasonable.season_constrains.empty? ? SeasonConstrain.new : seasonable.season_constrains %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= form.link_to_add "Añadir periodo de publicación", :season_constrains %>
+    <%= form.fields_for :season_constrains, seasons do |f| %>
+      <%= f.input :id, as: :hidden, input_html: {value: f.object.id} %>
+      <%= f.input :starts_at, as: :date %>
+      <%= f.input :ends_at, as: :date, include_blank: true %>
+    <% end %>
+  </div>
+</div>
