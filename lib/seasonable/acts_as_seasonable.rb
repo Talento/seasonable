@@ -18,7 +18,7 @@ module Seasonable
   
   module SeasonsHelper
     def seasons_for seasonable, options = {}
-      @template.render :partial=>"/admin/shared/seasons_for", locals: {seasonable: seasonable, form: self}
+      @template.render :partial=>"/seasonable/seasons_for", locals: {seasonable: seasonable, form: self}
     end
   end
 end
