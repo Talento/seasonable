@@ -1,3 +1,5 @@
+require 'rails'
+
 module Seasonable
   class Engine < ::Rails::Engine
     # Use minitest-spec by default
